@@ -115,16 +115,16 @@ const Skill = () => {
     return (
         <div ref={ref} id='Skills' className=' px-10 md:px-40 md:py-8 py-4 flex flex-col mx-auto my-8 relative transition  duration-300 '>
             <div className='mt-10'>
-                <h1 className={`sm:text-8xl text-5xl  sm:mt-20 font-extrabold my-6 text-blue-950 text-center mb-10   ${inView ? " animate-flip-up animate-duration-[1000ms] animate-ease-in" : " opacity-0"}`}>My Skills</h1>
+                <h1 className={`sm:text-8xl text-5xl  sm:mt-20 font-extrabold my-6 text-blue-950 text-center mb-10   ${inView ? " opacity-100 translate-y-0" : " opacity-0 translate-y-52"} transition-all duration-500`}>My Skills</h1>
                 <div className={`flex flex-wrap gap-6 justify-center`}>
                     {showSkill}
                 </div>
             </div>
             <div className=' mt-10 '>
-                <h1 className=' text-5xl font-bold my-6 text-blue-950 text-center md:text-6xl '>My Projects</h1>
+                <h1 className= {`text-5xl font-bold my-6 text-blue-950 text-center md:text-6xl ${inView ? " opacity-100 translate-y-0" : " opacity-0 translate-y-52"} transition-all duration-500 delay-100`} >My Projects</h1>
                 <div className=' flex gap-6 pb-8 scroll-smooth overflow-scroll scroll-p-4 snap-mandatory'>
 
-                    <div className=' border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md'>
+                    <div className= {`border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md ${inView ? " opacity-100 translate-x-0" : " opacity-0 translate-x-52"} transition-all duration-500 delay-100`}>
                         <h3 className='mt-3 font-extrabold tracking-wider text-blue-900 text-center text-2xl w-full '>Weather-React</h3>
                         <img className='p-2 my-2 rounded-2xl h-64' src={weather} alt='project' />
                         <div className='flex justify-around w-full my-3'>
@@ -142,7 +142,7 @@ const Skill = () => {
                         </div>
                     </div>
 
-                    <div className=' border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md'>
+                    <div className= {`border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md ${inView ? " opacity-100 translate-x-0" : " opacity-0 translate-x-52"} transition-all duration-500`}>
                         <h3 className='mt-3 font-extrabold tracking-wider text-blue-900 text-center text-2xl w-full'>Calculator-React</h3>
                         <img className='p-2 my-2  rounded-2xl h-64' src={calculate} alt='calculator' />
                         <div className='flex justify-around w-full my-3'>
@@ -156,7 +156,7 @@ const Skill = () => {
                         </div>
                     </div>
 
-                    <div className=' border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md'>
+                    <div className= {`border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md ${inView ? " opacity-100 translate-x-0" : " opacity-0 translate-x-52"} transition-all duration-500 delay-200`}>
                         <h3 className='mt-3 font-extrabold tracking-wider text-blue-900 text-center text-2xl w-full'>Todo-React</h3>
                         <img className='p-2 my-2  rounded-2xl h-64' src={todoReact} alt='calculator' />
                         <div className='flex justify-around w-full my-3'>
@@ -175,7 +175,7 @@ const Skill = () => {
                         </div>
                     </div>
 
-                    <div className=' border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md'>
+                    <div className= {`border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md ${inView ? " opacity-100 translate-x-0" : " opacity-0 translate-x-52"} transition-all duration-500 delay-300`}>
                         <h3 className='mt-3 font-extrabold tracking-wider text-blue-900 text-center text-2xl w-full '>Todo-PHP</h3>
                         <img className='p-2 my-2  rounded-2xl h-64' src={todoPhp} alt='TodoPHP' />
                         <div className='flex justify-around w-full my-3'>
@@ -188,25 +188,18 @@ const Skill = () => {
                         </div>
                     </div>
 
-                    <div className=' border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md'>
+                    <div className= {`border border-slate-400 max-w-96 min-w-80  rounded-xl flex flex-col items-center snap-start shadow-md ${inView ? " opacity-100 translate-x-0" : " opacity-0 translate-x-52"} transition-all duration-500 delay-500`}>
                         <h3 className='mt-3 font-extrabold tracking-wider text-blue-900 text-center text-2xl w-full '>School management-PHP</h3>
                         <img className='p-2 my-2  rounded-2xl h-64' src={school} alt='School management-php' />
                         <div className='flex justify-around w-full my-3'>
                             <a
                                 href='https://github.com/tud-tud/school-management-php.git'
                                 target='_blank'
-                                className=' bg-black py-2 px-4 w-full mx-20 mb-5 text-white text-2xl rounded-md flex  items-center justify-center   gap-2 hover:bg-gradient-to-tr hover:from-purple-600 hover:to-blue-300' >
+                                className=' bg-black py-2 px-4 w-full mx-20 mb-5 text-white text-2xl rounded-md flex  items-center justify-center   gap-2 hover:bg-gradient-to-tr hover:from-purple-600 hover:to-blue-300 ' >
                                 <FaGithub className='tect-4xl' /> GitHub
                             </a>
                         </div>
                     </div>
-
-
-
-
-
-
-
 
                 </div>
             </div>
